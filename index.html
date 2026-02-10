@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excali Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="toolbar" role="toolbar" aria-label="Drawing controls">
+      <div class="tool-group">
+        <button class="tool is-active" data-tool="select">Select</button>
+        <button class="tool" data-tool="rectangle">Rectangle</button>
+        <button class="tool" data-tool="ellipse">Ellipse</button>
+        <button class="tool" data-tool="line">Line</button>
+        <button class="tool" data-tool="pencil">Pencil</button>
+      </div>
+
+      <div class="tool-group">
+        <label>
+          Stroke
+          <input id="strokeColor" type="color" value="#1f2937" />
+        </label>
+        <label>
+          Fill
+          <input id="fillColor" type="color" value="#ffffff" />
+        </label>
+      </div>
+
+      <div class="tool-group">
+        <button id="deleteSelected">Delete</button>
+        <button id="clearBoard">Clear</button>
+        <button id="exportPng">Export PNG</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="board-wrapper">
+        <canvas id="board" width="1400" height="850" aria-label="Drawing board"></canvas>
+      </section>
+      <aside class="hint-panel">
+        <h1>Excali Clone</h1>
+        <ul>
+          <li>Pick a tool and drag on canvas to draw.</li>
+          <li>Use Select tool to move shapes.</li>
+          <li>Double click canvas to clear current selection.</li>
+        </ul>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
